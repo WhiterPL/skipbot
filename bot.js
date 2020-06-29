@@ -8,6 +8,10 @@ const app = express();
 var google = process.env.GOOGLE;
 var googlen = process.env.GOOGLEN;
 var token = process.env.TOKEN;
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
 
 function addZeros(s) { if (s.length < 3) { do { s = `0${s}`; } while(s.length < 3); } return s; }
 function replaceChars(a) { a = a.replace(/a/g, 'a').replace(/ć/g, 'c').replace(/ż/g, 'z').replace(/ź/g, 'z').replace(/ł/g, 'l').replace(/ó/g, 'o').replace(/ś/g, 's').replace(/ę/g, 'e').replace(/ń/g, 'n'); return a; }
