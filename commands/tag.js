@@ -1,6 +1,6 @@
 const Discord 	= require('discord.js');
 
-var tag = function(msg, args[]) {
+var tag = function(msg, args) {
   if (args.length == 2) {
 	msg.channel.send(new Discord.MessageEmbed()
 		.setColor('#21d92a')
