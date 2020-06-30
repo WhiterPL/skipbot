@@ -14,7 +14,7 @@ const port 	= process.env.PORT || 3000;
 
 //Commands
 var help 	= require('./commands/help.js');
-var tag 	= require('./commands/tag.js');
+var tagScp 	= require('./commands/tag.js');
 var randomScp = require('./commands/randomScp.js');
 
 app.listen(port, "0.0.0.0", function() {
@@ -36,7 +36,7 @@ client.on('message', msg => {
 			help(msg, args);
 		break;
 		case 'tag':
-			tag(msg, args);
+			tagScp(msg, args);
 		break;
 		case 'rand':
 			randomScp(msg, args[1]);
