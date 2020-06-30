@@ -6,15 +6,15 @@ const Discord 	= require('discord.js');
 const client 	= new Discord.Client();
 const app 	= express();
 
-var google 	= process.env.GOOGLE;
-var googlen 	= process.env.GOOGLEN;
-var token 	= process.env.TOKEN;
-var port 	= process.env.PORT || 3000;
+const google 	= process.env.GOOGLE;
+const googlen 	= process.env.GOOGLEN;
+const token 	= process.env.TOKEN;
+const port 	= process.env.PORT || 3000;
 
 
 //Commands
-const help = require('./commands/help.js');
-const tag = require('./commands/tag.js');
+const help 	= require('./commands/help.js');
+const tag 	= require('./commands/tag.js');
 const randomScp = require('./commands/randomScp.js');
 
 app.listen(port, "0.0.0.0", function() {
