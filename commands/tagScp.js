@@ -20,7 +20,7 @@ const Discord 	= require('discord.js');
 //	}
 //};
 
-var tag = function(msg, args) {
+var tagScp = function(msg, args) {
   console.log(args)
   msg.channel.send(new Discord.MessageEmbed()
   			    		.setColor('#21d92a')
@@ -40,4 +40,4 @@ var tag = function(msg, args) {
 };
 
 
-exports.data = tag;
+exports.data = tagScp;
