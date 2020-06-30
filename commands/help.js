@@ -1,4 +1,4 @@
-var help = function() {
+var help = function(msg) {
   msg.channel.send(new Discord.MessageEmbed()
   			    		.setColor('#21d92a')
   			    		.setTitle('Lista komend')
