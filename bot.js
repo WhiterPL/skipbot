@@ -14,6 +14,8 @@ var port 	= process.env.PORT || 3000;
 
 //Commands
 const help = require('./commands/help.js');
+const tag = require('./commands/tag.js');
+const randomScp = require('./commands/randomScp.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
@@ -29,7 +31,17 @@ client.on('message', msg => {
 	var args = msg.content.split(' ');
 	
 	console.log(args);
-	if (args[0] == '!pomoc') {help(msg);}
+	switch(args[0].slice(1)) {
+		case 'pomoc':
+			help(msg);
+		break;
+		case 'tag':
+			tag(msg, args);
+		break;
+		case 'rand':
+			randomScp(msg, args[1]);
+		break;
+	}
 });
 
 client.login(token);
