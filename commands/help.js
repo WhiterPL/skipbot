@@ -1,3 +1,5 @@
+const Discord 	= require('discord.js');
+
 var help = function(msg) {
   msg.channel.send(new Discord.MessageEmbed()
   			    		.setColor('#21d92a')
