@@ -1,5 +1,4 @@
 const http 	= require("http");
-const request 	= require('request');
 const express 	= require("express");
 const Discord 	= require('discord.js');
 
@@ -16,6 +15,8 @@ const port 	= process.env.PORT || 3000;
 var help 	= require('./commands/help.js');
 var tagScp 	= require('./commands/tagScp.js');
 var randomScp 	= require('./commands/randomScp.js');
+var searchScp	= require('./commands/searchScp.js');
+var searchWiki	= require('./commands/searchWiki.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
@@ -40,6 +41,12 @@ client.on('message', msg => {
 		break;
 		case 'rand':
 			randomScp(msg, args[1]);
+		break;
+		case 'scp':
+			searchScp(msg, args);
+		break;
+		case 'wiki':
+			searchWiki(msg, args);
 		break;
 	}
 });
