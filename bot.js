@@ -33,6 +33,6 @@ client.on('message', msg => {
 	
 	console.log(args);
 	if (args[0] == help) {help(msg);}
-};
+});
 
 client.login(token);
