@@ -17,6 +17,6 @@ var tag = function(msg, args) {
 	.setTitle('Tagi')
 	.setDescription(list));
 	}
-};
+return; };
 
 exports.data = tag;
