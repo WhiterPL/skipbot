@@ -1,4 +1,6 @@
-var addZeros = require('addZeros.js');
+const Discord 	= require('discord.js');
+const addZeros = require('./addZeros.js');
+
 var randomScp = function(msg, args) {
 if (args == null) {
 	msg.channel.send(new Discord.MessageEmbed()
