@@ -13,9 +13,9 @@ const port 	= process.env.PORT || 3000;
 
 
 //Commands
-const help 	= require('./commands/help.js');
-const tag 	= require('./commands/tag.js');
-const randomScp = require('./commands/randomScp.js');
+var help 	= require('./commands/help.js');
+var tag 	= require('./commands/tag.js');
+var randomScp = require('./commands/randomScp.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
