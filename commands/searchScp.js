@@ -43,7 +43,7 @@ function checkType(s, link, title) {
 	}
 }
 
-var searchScp = function(msg, args[]) {
+var searchScp = function(msg, args) {
   var link = 'http://scp-wiki.net';
 	var title = 'SCP-';
 	
