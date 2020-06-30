@@ -28,11 +28,11 @@ client.on('message', msg => {
 	if (msg.author.bot || !msg.content.startsWith('!')){return;}
 	var args = [
 		msg.content.slice(1, msg.content.indexOf(' ')),
-		msg.content.slice(msg.content.indexOf(' '))
+		msg.content.slice(msg.content.indexOf(' ')+1)
 		];
 	
 	console.log(args);
-	if (args[0] == help) {help(msg);}
+	if (args[0] == 'help') {help(msg);}
 });
 
 client.login(token);
