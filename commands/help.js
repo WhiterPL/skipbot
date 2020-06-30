@@ -1,6 +1,7 @@
 const Discord 	= require('discord.js');
 
-var help = function(msg) {
+var help = function(msg, args) {
+  console.log(args)
   msg.channel.send(new Discord.MessageEmbed()
   			    		.setColor('#21d92a')
   			    		.setTitle('Lista komend')
