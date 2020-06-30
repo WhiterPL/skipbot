@@ -30,4 +30,4 @@ else {
 			    }
 	}
 };
-exports.data = randomScp;
+module.exports = randomScp;
