@@ -92,4 +92,4 @@ var searchScp = function(msg, args[]) {
 	}
 };
 
-exports.data = searchScp;
+module.exports = searchScp;
