@@ -33,7 +33,7 @@ client.on('message', msg => {
 	console.log(args);
 	switch(args[0].slice(1)) {
 		case 'pomoc':
-			help(msg);
+			help(msg, args);
 		break;
 		case 'tag':
 			tag(msg, args);
