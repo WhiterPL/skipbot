@@ -4,12 +4,12 @@ const addZeros 	= require('./addZeros.js');
 function checkLang(s, link, title) {
 	// ANG WIKI
 	if(s.startsWith('o')) {
-		args[1] = args[1].slice(1);
+		s = s.slice(1);
 		link += '/scp-';
 	}
 	// PL WIKI
 	else if (s.startsWith('pl')) {
-		args[1] = args[1].slice(2);
+		s = s.slice(2);
 		link += '.pl/scp-pl-';
 		title += 'PL-';
 	}
