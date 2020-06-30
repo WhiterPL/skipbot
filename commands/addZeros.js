@@ -6,5 +6,4 @@ var addZeros = function(s) {
   } 
   return s;
 };
-
-exports.data = addZeros;
+module.exports = addZeros;
