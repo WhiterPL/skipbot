@@ -52,6 +52,7 @@ var searchScp = function(msg, args) {
 	
 	if (args.length == 2) {
 		args[1] = args[1].toLowerCase();
+		console.log(`${msg.author.username}: ${args[1]}`);
 		details = setDetails(args[1], details);
 		try {
 			msg.channel.send(new Discord.MessageEmbed()
@@ -74,6 +75,7 @@ var searchScp = function(msg, args) {
 				title: "SCP-"
 			};
 			args[i] = args[i].toLowerCase();
+			console.log(`${msg.author.username}: ${args[i]}`);
 			details = setDetails(args[i], details);
 			
 			list += "[" + details.title + "](" + details.link + ") \n";
