@@ -7,7 +7,7 @@ if (args == null) {
 		.setColor('#21d92a')
 		.setTitle('Random Skip')
 		.setURL('http://scp-wiki.net.pl/random:random-scp'));
-	console.log(`${msg.author}: rand`);
+	console.log(`${msg.author.username}: rand`);
 }
 else {
 	args = args.trim().toLowerCase();
@@ -19,7 +19,7 @@ else {
                     			.setColor('#21d92a')
                     			.setTitle('SCP-PL-'+ rand)
                     			.setURL('http://scp-wiki.net.pl/scp-pl-' + rand));
-				console.log(`${msg.author}: rand pl`);
+				console.log(`${msg.author.username}: rand pl`);
 			break;
 			case 'ang':
                    		var rand = Math.floor((Math.random()*6000)+1).toString();
@@ -28,7 +28,7 @@ else {
                    			.setColor('#21d92a')
                    			.setTitle('SCP-'+ rand)
                    			.setURL('http://scp-wiki.net.pl/scp-' + rand));
-				console.log(`${msg.author}: rand ang`);
+				console.log(`${msg.author.username}: rand ang`);
 			break;
 			    }
 	}
