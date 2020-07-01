@@ -1,12 +1,9 @@
-const http 	= require("http");
 const express 	= require("express");
 const Discord 	= require('discord.js');
 
 const client 	= new Discord.Client();
 const app 	= express();
 
-const google 	= process.env.GOOGLE;
-const googlen 	= process.env.GOOGLEN;
 const token 	= process.env.TOKEN;
 const port 	= process.env.PORT || 3000;
 
@@ -17,6 +14,7 @@ var tagScp 	= require('./commands/tagScp.js');
 var randomScp 	= require('./commands/randomScp.js');
 var searchScp	= require('./commands/searchScp.js');
 var searchWiki	= require('./commands/searchWiki.js');
+var fuelScp	= require('./commands/fuelScp.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
@@ -47,6 +45,9 @@ client.on('message', msg => {
 		break;
 		case 'wiki':
 			searchWiki(msg, args);
+		break;
+		case 'scpfuel':
+			fuelScp(msg, args);
 		break;
 	}
 });
