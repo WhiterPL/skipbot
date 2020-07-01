@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const request = require('request');
 
+const google = process.env.GOOGLE;
+const googlen = process.env.GOOGLEN;
+
 var wiki = function(msg, args) {
   if (args.length > 2) for (var i = 2; i <= args.length-1; i++) {
     args[1] = `${args[1]} ${args[i]}`;
