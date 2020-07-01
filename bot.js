@@ -29,7 +29,6 @@ client.on('message', msg => {
 	if (msg.author.bot || !msg.content.startsWith('!')){return;}
 	var args = msg.content.split(' ');
 	
-	console.log(args);
 	switch(args[0].slice(1)) {
 		case 'pomoc':
 			help(msg, args);
