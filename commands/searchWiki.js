@@ -19,7 +19,7 @@ var wiki = function(msg, args) {
         try {
           var link  = await body.items[0].link;
           var desc  = await body.items[0].snippet;
-          var title = await body.items    
+          var title = await body.items[0].title;
           msg.channel.send(new Discord.MessageEmbed()
           	.setColor('#21d92a')
           	.setTitle(title)
@@ -46,7 +46,6 @@ var wiki = function(msg, args) {
     });
   } catch (e) {
     console.log(`Błąd podczas wyszukiwania frazy: ${args[1]}`);
-    console.log(`https://www.googleapis.com/customsearch/v1?key=${google}&cx=${googlen}&q=${replaceChars(args[1])}`);
   }
 }
 
