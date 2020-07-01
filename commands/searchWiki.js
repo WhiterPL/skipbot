@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const request = require('request');
+const replaceChars = require('./replaceChars.js');
 
 const google = process.env.GOOGLE;
 const googlen = process.env.GOOGLEN;
