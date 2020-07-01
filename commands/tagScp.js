@@ -1,8 +1,8 @@
 const Discord 	= require('discord.js');
 
 var tagScp = function(msg, args) {
-  console.log(args)
   if (args.length == 2) {
+    console.log(`${msg.author.username}: tag ${args[1]}`);
     msg.channel.send(new Discord.MessageEmbed()
 	    .setColor('#21d92a')
 	    .setTitle(args[1])
@@ -11,6 +11,7 @@ var tagScp = function(msg, args) {
   else if (args.length > 2) {
     var list = "";
     for (var i = 1; i <= args.length-1; i++) {
+      console.log(`${msg.author.username}: tag ${args[i]}`);
       list += `[${args[i]}](http://scp-wiki.net.pl/system:page-tags/tag/${args[i]}) \n`;
     }
     msg.channel.send(new Discord.MessageEmbed()
