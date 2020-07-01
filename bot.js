@@ -27,6 +27,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	if (msg.author.bot || !msg.content.startsWith('!')){return;}
+	else if(msg.content.includes('r34') || msg.content.includes('e621') || msg.content.includes('porn')) {
+		msg.channel.send(new Discord.MessageAttachment('https://i.kym-cdn.com/entries/icons/original/000/033/758/Screen_Shot_2020-04-28_at_12.21.48_PM.png'));
+		console.log(`${msg.author.username} is horny!`);	
+	}
+	
 	var args = msg.content.split(' ');
 	
 	switch(args[0]) {
@@ -48,10 +53,6 @@ client.on('message', msg => {
 		case '!scpfuel':
 			fuelScp(msg, args);
 		break;
-	}
-	if(msg.content.includes('r34') || msg.content.includes('e621') || msg.content.includes('porn')) {
-		msg.channel.send(new Discord.MessageAttachment('https://i.kym-cdn.com/entries/icons/original/000/033/758/Screen_Shot_2020-04-28_at_12.21.48_PM.png'));
-		console.log(`${msg.author.username} is horny!`);	
 	}
 });
 
