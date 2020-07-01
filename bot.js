@@ -48,10 +48,10 @@ client.on('message', msg => {
 		case '!scpfuel':
 			fuelScp(msg, args);
 		break;
-		case 'r34':
-			msg.channel.send(new Discord.MessageAttachment('https://i.kym-cdn.com/entries/icons/original/000/033/758/Screen_Shot_2020-04-28_at_12.21.48_PM.png'));
-			console.log(`${msg.author.username} is horny!`);
-		break;
+	}
+	if(msg.content.contains('r34')) {
+		msg.channel.send(new Discord.MessageAttachment('https://i.kym-cdn.com/entries/icons/original/000/033/758/Screen_Shot_2020-04-28_at_12.21.48_PM.png'));
+		console.log(`${msg.author.username} is horny!`);	
 	}
 });
 
