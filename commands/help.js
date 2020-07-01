@@ -17,6 +17,6 @@ var help = function(msg, args) {
   									'`numer`**J** - wyszukuje raport Joke \n' +
   									'`numer`**EX** - wyszukuje obiekty zrozumiane')
   							);
-  console.log(`${msg.author}: pomoc`);
+  console.log(`${msg.author.username}: pomoc`);
 };
 module.exports = help;
