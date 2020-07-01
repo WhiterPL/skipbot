@@ -1,63 +1,63 @@
 const Discord 	= require('discord.js');
 const addZeros 	= require('./addZeros.js');
 
-function checkLang(s, link, title) {
+function setDetails(s, details) {
 	// ANG WIKI
 	if(s.startsWith('o')) {
 		s = s.slice(1);
-		link += '/scp-';
+		details.link += '/scp-';
 	}
 	// PL WIKI
 	else if (s.startsWith('pl')) {
 		s = s.slice(2);
-		link += '.pl/scp-pl-';
-		title += 'PL-';
+		details.link += '.pl/scp-pl-';
+		details.title += 'PL-';
 	}
 	else {
-		link += '.pl/scp-';
+		details.link += '.pl/scp-';
 	}
-}
-
-function checkType(s, link, title) {
+	
 	//JOKE
 	if (s.endsWith("j")) {
 		s = s.slice(0,-1);
 		if(isNaN(s) || s < 0 || s.includes("+")) {return;}
 		s = addZeros(s);
-		link += s + '-j';
-		title += s + '-J';
+		details.link += s + '-j';
+		details.title += s + '-J';
 	}
 	//EXPLAINED
 	else if (s.endsWith("ex")) {
 		s = s.slice(0,-2);
 		if(isNaN(s) || s < 0 || s.includes("+")) {return;}
 		s = addZeros(s);
-		link += s + '-ex';
-		title += s + '-EX';
+		details.link += s + '-ex';
+		details.title += s + '-EX';
 	}
 	else {
 		if(isNaN(s) || s < 0 || s.includes("+")) {return;}
 		s = addZeros(s);
-		link += s;
-		title += s;
+		details.link += s;
+		details.title += s;
 	}
+	
+	return details;
 }
 
+
 var searchScp = function(msg, args) {
-  var link = 'http://scp-wiki.net';
-	var title = 'SCP-';
+	var details = {
+		link: "http://scp-wiki.net",
+		title: "SCP-"
+	};
 	
 	if (args.length == 2) {
 		args[1] = args[1].toLowerCase();
-		
-		checkLang(args[1], link, title);
-		checkType(args[1], link, title);
-		
+		details = setDetails(args[1], details);
 		try {
 			msg.channel.send(new Discord.MessageEmbed()
 				.setColor('#21d92a')
-				.setTitle(title)
-				.setURL(link));
+				.setTitle(details.title)
+				.setURL(details.link));
 		
 		} catch (e) {
 			console.log("Error " + e);
@@ -69,14 +69,14 @@ var searchScp = function(msg, args) {
 	else if (args.length > 2) {
 		var list = "";
 		for (var i = 1; i <= args.length-1; i++) {
-			link = 'http://scp-wiki.net';
-			title = 'SCP-';
+			var details = {
+				link: "http://scp-wiki.net",
+				title: "SCP-"
+			};
 			args[i] = args[i].toLowerCase();
+			details = setDetails(args[i], details);
 			
-			checkLang(args[i], link, title);
-			checkType(args[i], link, title);
-			
-			list += "[" + title + "](" + link + ") \n";
+			list += "[" + details.title + "](" + details.link + ") \n";
 			console.log(`${msg.author.username}: ${args[i]}`);
 		}
 		try {
