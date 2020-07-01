@@ -45,6 +45,7 @@ var wiki = function(msg, args) {
     });
   } catch (e) {
     console.log(`Błąd podczas wyszukiwania frazy: ${args[1]}`);
+    console.log(`https://www.googleapis.com/customsearch/v1?key=${google}&cx=${googlen}&q=${replaceChars(args[1])}`);
   }
 }
 
