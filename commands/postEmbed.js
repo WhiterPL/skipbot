@@ -18,7 +18,7 @@ var postEmbed = function(msg, args) {
                                         .setTitle(embedAtribs[0])
                                         .setURL(embedAtribs[1])
                                         .setDescription(embedAtribs[2])
-                                        .setFooter(msg.author.username, `https://cdn.discordapp.com/avatars/${msg.user.id}/${msg.user.avatar}.png`)
+                                        .setFooter(msg.author.username, msg.user.avatarURL)
         ));
   } catch(e) {
     msg.channel.send('Nieprawidłowy kanał'); 
