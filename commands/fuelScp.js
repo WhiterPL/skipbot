@@ -21,7 +21,6 @@ var fuelScp = function(msg, args) {
                                   
                                  title = title.replace(/ /g, "_").replace(/,/g, "%2");
                                  var img = `https://commons.wikimedia.org/wiki/Special:FilePath/${title.slice(5)}`;
-                                 console.log(img); 
                                        msg.channel.send(new Discord.MessageEmbed()
                                            .setColor('#21d92a')
                                            .setTitle('Skip Fuel')
