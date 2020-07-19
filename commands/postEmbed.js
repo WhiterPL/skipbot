@@ -16,8 +16,8 @@ var postEmbed = function(msg, args) {
                                         .setTitle(embedAtribs[0])
                                         .setURL(embedAtribs[1])
                                         .setDescription(embedAtribs[2])
-                                        .setFooter(msg.author.username, msg.author.avatarURL()
-                                        .setTimestamp())
+                                        .setFooter(msg.author.username, msg.author.avatarURL())
+                                        .setTimestamp()
         ));
   } catch(e) {
     msg.channel.send('Nieprawidłowy kanał'); 
