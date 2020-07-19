@@ -18,11 +18,14 @@ var fuelScp = function(msg, args) {
                                var license = await checkImage.query.pages[id].imageinfo[0].extmetadata.LicenseShortName.value;
                                var title = await checkImage.query.pages[id].title;
                                if ((license.includes('Public domain') || license.includes('CC BY-SA 3.0') || license.includes('CC BY-SA 4.0') || license.includes('CC0')) && (title.includes('.jpg') || title.includes('.png'))) {
-                                       title = title.replace(/ /g, "_");
+                                  
+                                 title = title.replace(/ /g, "_");
+                                 var img = `https://commons.wikimedia.org/wiki/Special:FilePath/${title.slice(5)}`;
                                        msg.channel.send(new Discord.MessageEmbed()
                                            .setColor('#21d92a')
                                            .setTitle('Skip Fuel')
-                                           .setURL('https://commons.wikimedia.org/wiki/'+ title));
+                                           .setURL('https://commons.wikimedia.org/wiki/'+ title)
+                                           .setImage(img));
                                        console.log(`${msg.author.username}: ${id} - ${title} - ${license}`);
                                } else { LookForImage(); }
                             } catch (e) { LookForImage(); }
