@@ -32,7 +32,7 @@ client.on('message', msg => {
 	var args = msg.content.split(' ');
 	
 	switch(args[0].slice(1)) {
-		case '!pomoc':
+		case 'pomoc':
 			help(msg, args);
 		break;
 		case 'tag':
