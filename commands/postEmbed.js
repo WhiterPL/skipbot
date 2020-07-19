@@ -12,7 +12,12 @@ var postEmbed = function(msg, args) {
     
   try {
     msg.client.channels.fetch(args[1].slice(2,-1))
-        .then(channel => channel.send(`Działa`));
+        .then(channel => channel.send(new Discord.MessageEmbed()
+                                        .setColor('#21d92a')
+                                        .setTitle(embedAtribs[0])
+                                        .setURL(embedAtribs[1])
+                                        .setDescription(embedAtribs[2])
+        );
   } catch(e) {
     msg.channel.send('Nieprawidłowy kanał'); 
   }
