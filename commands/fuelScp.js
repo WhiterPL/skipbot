@@ -17,12 +17,15 @@ var fuelScp = function(msg, args) {
                             try {
                                var license = await checkImage.query.pages[id].imageinfo[0].extmetadata.LicenseShortName.value;
                                var title = await checkImage.query.pages[id].title;
+                               var img = await title.slice(4);
+                               console.log(img);
                                if ((license.includes('Public domain') || license.includes('CC BY-SA 3.0') || license.includes('CC BY-SA 4.0') || license.includes('CC0')) && (title.includes('.jpg') || title.includes('.png'))) {
                                        title = title.replace(/ /g, "_");
                                        msg.channel.send(new Discord.MessageEmbed()
                                            .setColor('#21d92a')
                                            .setTitle('Skip Fuel')
-                                           .setURL('https://commons.wikimedia.org/wiki/'+ title));
+                                           .setURL('https://commons.wikimedia.org/wiki/'+ title)
+                                           .setImage(img));
                                        console.log(`${msg.author.username}: ${id} - ${title} - ${license}`);
                                } else { LookForImage(); }
                             } catch (e) { LookForImage(); }
