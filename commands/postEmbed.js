@@ -9,6 +9,7 @@ var postEmbed = function(msg, args) {
     
   var embedAtribs = args[2].split(';');
   console.log(embedAtribs);
+  console.log(msg.author.avatar);
     
   try {
     msg.client.channels.fetch(args[1].slice(2,-1))
@@ -17,6 +18,7 @@ var postEmbed = function(msg, args) {
                                         .setTitle(embedAtribs[0])
                                         .setURL(embedAtribs[1])
                                         .setDescription(embedAtribs[2])
+                                        .setFooter(msg.author.username, msg.author.avatar)
         ));
   } catch(e) {
     msg.channel.send('Nieprawidłowy kanał'); 
