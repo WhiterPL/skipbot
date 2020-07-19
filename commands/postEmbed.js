@@ -8,8 +8,6 @@ var postEmbed = function(msg, args) {
   }
     
   var embedAtribs = args[2].split(';');
-  console.log(embedAtribs);
-  console.log(msg.author.avatar);
     
   try {
     msg.client.channels.fetch(args[1].slice(2,-1))
@@ -23,6 +21,8 @@ var postEmbed = function(msg, args) {
         ));
   } catch(e) {
     msg.channel.send('Nieprawidłowy kanał'); 
+  } finally {
+    console.log(`${msg.author.username}: post`); 
   }
   }
 };
