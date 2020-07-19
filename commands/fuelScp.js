@@ -19,7 +19,7 @@ var fuelScp = function(msg, args) {
                                var title = await checkImage.query.pages[id].title;
                                if ((license.includes('Public domain') || license.includes('CC BY-SA 3.0') || license.includes('CC BY-SA 4.0') || license.includes('CC0')) && (title.includes('.jpg') || title.includes('.png'))) {
                                   
-                                 title = title.replace(/ /g, "_").replace(/,/g, "%2");
+                                 title = title.replace(/ /g, "_");
                                  var img = `https://commons.wikimedia.org/wiki/Special:FilePath/${title.slice(5)}`;
                                        msg.channel.send(new Discord.MessageEmbed()
                                            .setColor('#21d92a')
