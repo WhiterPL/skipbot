@@ -9,6 +9,7 @@ var help = function(msg, args) {
   									'**• !scpfuel** - wysyła link do losowego obrazka zgodnego z licencją CC BY-SA 3.0 \n' +
   									'**• !rand** `pl/ang` - wysyła link do losowego polskiego/angielskiego raportu \n' +
   									'**• !wiki** `nazwa` - wysyła link do strony na polskiej wiki \n' +
+                    '**• !hist** - pozwala zagrać w interaktywną grę tekstową \n' +            
   									'**• !tag** `nazwa` - wysyła link do listy stron z odpowiednim tagiem \n' +
   									'**• !scp** `numer` - wysyła link do angielskiego raportu. \n \n' +
   									'   **Opcje wyszukiwania:** \n' +
