@@ -11,11 +11,12 @@ const port 	= process.env.PORT || 3000;
 //Commands
 var help 	= require('./commands/help.js');
 var tagScp 	= require('./commands/tagScp.js');
+var fuelScp	= require('./commands/fuelScp.js');
+var storyScp	= require('./commands/storyScp.js');
 var randomScp 	= require('./commands/randomScp.js');
 var searchScp	= require('./commands/searchScp.js');
-var searchWiki	= require('./commands/searchWiki.js');
-var fuelScp	= require('./commands/fuelScp.js');
 var postEmbed	= require('./commands/postEmbed.js');
+var searchWiki	= require('./commands/searchWiki.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
@@ -52,6 +53,9 @@ client.on('message', msg => {
 		break;
 		case 'post':
 			postEmbed(msg, args);
+		break;
+		case 'hist':
+			storyScp(msg, args);
 		break;
 	}
 });
