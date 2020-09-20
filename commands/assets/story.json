@@ -1,21 +1,21 @@
 [
  {
-  content: "Test",
-  goto: [
+  "content": "Test",
+  "goto": [
     1,
     2
   ]
  },
  {
-  content: "Test 2",
-  goto: [
+  "content": "Test 2",
+  "goto": [
     0,
     2
   ]
  },
  {
-  content: "Test 3"
-  goto: [
+  "content": "Test 3"
+  "goto": [
     0,
     1
   ]
