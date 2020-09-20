@@ -7,6 +7,10 @@ var storyScp = function(msg, args) {
                 .setTitle('Historia')
                 .setDescription(storyFile[0].content)
                 );
+  //TODO:
+  // - Timestamp i autor
+  // - Bot czeka na reakcje
+  // - Reakcje przesyłają do następnych tekstów
 };
 
 module.exports = storyScp;
