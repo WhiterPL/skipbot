@@ -2,16 +2,16 @@ const Discord = require('discord.js');
 const storyFile = require('./assets/story.json');
 
 var emotes = [
-    "\:one:",
-    "\:two:",
-    "\:three:",
-    "\:four:",
-    "\:five:",
-    "\:six:",
-    "\:seven:",
-    "\:eight:",
-    "\:nine:",
-    "\:zero:"
+    "1️",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0"
   ];
 
 var storyScp = function(msg, args) {
