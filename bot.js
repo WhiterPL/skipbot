@@ -55,7 +55,7 @@ client.on('message', msg => {
 			postEmbed(msg, args);
 		break;
 		case 'hist':
-			storyScp(msg, [0]);
+			storyScp(msg, 0);
 		break;
 	}
 });
