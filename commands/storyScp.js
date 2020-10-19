@@ -37,7 +37,7 @@ var storyScp = function(msg, args) {
     		for (var i = 0; i < 10; i++) {
       			if (reaction.emoji.name === emotes[i]) {
         			storyScp(msg, storyFile[args].goto[i]);
-				embedMsg.delete(100);
+				embedMsg.delete({ timeout: 100 });
       			}
     		}
 	});
