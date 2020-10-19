@@ -15,14 +15,14 @@ const emotes = [
   ];
 
 var storyScp = function(msg, args) {
-  msg.channel.send(new Discord.MessageEmbed()
+  var story = msg.channel.send(new Discord.MessageEmbed()
   		.setColor('#21d92a')
                 .setTitle('Historia')
                 .setDescription(storyFile[args].content)
                 );
   
-  for (var i = 1; i < storyFile[args].goto.length; i++) {
-    msg.react(emotes[i]);
+  for (var i = 0; i < storyFile[args].goto.length; i++) {
+    story.react(emotes[i]);
   }
   
   const filter = (reaction, user) => {
