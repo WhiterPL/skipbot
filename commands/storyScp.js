@@ -1,27 +1,27 @@
 const Discord = require('discord.js');
 const storyFile = require('./assets/story.json');
 
-var emotes = [
-    "1️",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "0"
+const emotes = [
+    "1️⃣",
+    "2️⃣",
+    "3️⃣",
+    "4️⃣",
+    "5️⃣",
+    "6️⃣",
+    "7️⃣",
+    "8️⃣",
+    "9️⃣",
+    "0️⃣",
   ];
 
 var storyScp = function(msg, args) {
   msg.channel.send(new Discord.MessageEmbed()
-  			    		.setColor('#21d92a')
+  		.setColor('#21d92a')
                 .setTitle('Historia')
                 .setDescription(storyFile[args].content)
                 );
   
-  for (var i = 0; i < storyFile[args].goto.length; i++) {
+  for (var i = 1; i < storyFile[args].goto.length; i++) {
     msg.react(emotes[i]);
   }
   
