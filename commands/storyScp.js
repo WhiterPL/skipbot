@@ -15,18 +15,19 @@ const emotes = [
   ];
 
 var storyScp = function(msg, args) {
-  var story = msg.channel.send(new Discord.MessageEmbed()
+  var story = new Discord.MessageEmbed()
   		.setColor('#21d92a')
                 .setTitle('Historia')
                 .setDescription(storyFile[args].content)
                 );
+  msg.channel.send(story);
   
   for (var i = 0; i < storyFile[args].goto.length; i++) {
     story.react(emotes[i]);
   }
   
   const filter = (reaction, user) => {
-	  return emotes.includes(reaction.emoji.name) && user.id === message.author.id;
+	  return emotes.includes(reaction.emoji.name) && user.id === msg.author.id;
   };
   
   msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
