@@ -18,7 +18,7 @@ var storyScp = function(msg, args) {
 	
   var story = new Discord.MessageEmbed()
   		.setColor('#21d92a')
-                .setTitle('Historia')
+                .setTitle(storyFile[args].title)
                 .setDescription(storyFile[args].content);
 	
   msg.channel.send({embed: story}).then(embedMsg => {
