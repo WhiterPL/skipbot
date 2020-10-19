@@ -36,7 +36,7 @@ var storyScp = function(msg, args) {
 		const reaction = collected.first();
     		for (var i = 0; i < 10; i++) {
       			if (reaction.emoji.name === emotes[i]) {
-        			storyScp(msg, storyFile.goto[i]);
+        			storyScp(msg, storyFile[args].goto[i]);
       			}
     		}
 	});
