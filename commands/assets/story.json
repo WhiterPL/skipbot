@@ -1,23 +1,63 @@
 [
  {
-  "title":"Witaj, pracowniku",
+  "title":"Witaj, pracowniku", //0
   "content": "Poniższy terminal został wyposażony w moduł symulacji sensorycznej, w celu przygotowania cię na nieuniknione spotkanie z zagrożeniem o anomalnej naturze. Za jego pomocą będziesz mógł wybrać jeden z szeregu scenariuszy opartych na danych analitycznych, zebranych z raportów i zeznań personelu, który pomyślnie uniknął śmiertelnych ran fizycznych lub trwałego uszczerbku na zdrowiu psychicznym po kontakcie z obiektami anomalnymi. Aby kontynuować szkolenie, wybierz jeden scenariusz z listy: \n \n **1.** Samoczynny zapłon jamy ustnej \n \n **!UWAGA! Stosowanie oprogramowania jest niezalecane względem personelu o niskim lub bardzo niskim czynniku odporności na zagrożenia memetyczne !UWAGA!**",
   "goto": [
-    1,
-    2
+    2,
+    1
   ]
  },
  {
-  "title": "Samoczynny zapłon jamy ustnej — wprowadzenie",
-  "content": "Test 2",
-  "goto": [
-  ]
- },
- {
-  "title": "Error 404",
-  "content": "Blank page",
+  "title": "Error 404", //1 - strona placeholder
+  "content": "Blank page \n \n Jeśli napotkałeś tę stronę, to znaczy że nasza baza danych scenariuszy jest w trakcie prac konserwacyjnych. Nie myśl nad tym zbyt długo, bo możesz sobie jedynie zaszkodzić.",
   "goto": [
     0
+  ]
+ },
+ {
+  "title": "Samoczynny zapłon jamy ustnej — wprowadzenie", //2
+  "content": "Ciepło-gorzki posmak rozlewa się w twoich ustach, kiedy przystawiasz do nich kubek z świeżą kawą. Rozglądasz się po pokoju socjalnym, żeby zdecydować w jaki sposób spędzisz te kilka minut swojej słodkiej przerwy. Twoją uwagę przykuwa nowa twarz - młoda stażystka o imieniu Marta, która dopiero co dołączyła do twojego departamentu z jakiegoś programu poszukiwania młodych talentów, dziewczyna notuje coś w swoim kalendarzu siedząc przy stoliku. Przy drugim stoliku siedzi natomiast ten palant Kacper i porządkuje dokumenty. \n \n **1.** Przysiądź się do Marty \n **2.** Zobacz co u tego frajera \n **3.** Okej, a co jest w lodówce?",
+  "goto": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "title": "Stolik Marty", //3
+  "content": "Z braku atrakcyjniejszych miejsc siedzących, przysiadasz się do Marty.",
+  "goto": [
+    7
+  ]
+ },
+ {
+  "title": "Stolik Kacpra",//4
+  "content": "Z jakiegoś niewyjaśnionego powodu, przysiadasz się do Kacpra.",
+  "goto": [
+    7
+  ]
+ },
+ {
+  "title": "Lodówka",//5
+  "content": "Od tej ciągłej pracy nabiera się ochoty na coś pożywnego. Podchodzisz do lodówki, żeby spenetrować jej chłodne zakamarki, ale kiedy sięgasz, żeby ją otworzyć, zauważasz karteczkę samoprzylepną *\"Uwaga, zagrożenie poznawcze, nie otwierać!\"* z podpisem twojego kierownika. \n \n **1.** No trudno, nie otwierać, to nie otwierać \n **2.** Co złego mnie spotka w lodówce? Przeterminowane mleko?",
+  "goto": [
+    7,
+    6
+  ]
+ },
+ {
+  "title": "Wynik scenariusza: Utrata duszy",//6
+  "content": "Naprawdę? Jesteś największym rozczarowaniem departamentu zasobów ludzkich. Zgubił cię nie tyle brak doświadczenia, który możnaby jeszcze wybaczyć, ale całkowita głupota i skrajna niesubordynacja. Jeśli myślisz, że ten program nie ma realnych konsekwencji i można go sobie potraktować żartobliwie, to grubo się mylisz.",
+  "goto": [
+    0
+  ]
+ },
+ {
+  "title": "Pokój socjalny", //7
+  "content": "Niewielka oaza wydzielona z pustyni przestrzeni biurowej, składająca się z kilku szafek, blatu, mikrofali, lodówki oraz dwóch małych stolików z krzesłami, a to wszystko na posadzce w idealnym odcieniu beżu, dla łatwej konserwacji powierzchni płaskich. Znajdujesz się tutaj, ponieważ masz przerwę w pracy, wybierz swój los: \n \n **1.** Przysiądź się do Marty \n **2.** Zobacz co u tego frajera",
+  "goto": [
+    3,
+    4
   ]
  }
 ]
