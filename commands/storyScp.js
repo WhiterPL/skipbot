@@ -20,7 +20,7 @@ var storyScp = function(msg, args) {
   		.setColor('#21d92a')
                 .setTitle(storyFile[args].title)
                 .setDescription(storyFile[args].content)
-		.setFooter(msg.author.username, msg.author.avatarURL);
+		.setFooter(msg.author.username, msg.author.avatarURL());
 	
   msg.channel.send({embed: story}).then(embedMsg => {
 	  
