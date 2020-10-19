@@ -19,7 +19,8 @@ var storyScp = function(msg, args) {
   var story = new Discord.MessageEmbed()
   		.setColor('#21d92a')
                 .setTitle(storyFile[args].title)
-                .setDescription(storyFile[args].content);
+                .setDescription(storyFile[args].content)
+		.setFooter(msg.author.username, msg.author.avatarURL);
 	
   msg.channel.send({embed: story}).then(embedMsg => {
 	  
@@ -42,8 +43,6 @@ var storyScp = function(msg, args) {
     		}
 	});
   });
-  //TODO:
-  // - Timestamp i autor
 };
 
 module.exports = storyScp;
