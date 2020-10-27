@@ -25,16 +25,17 @@
  },
  {
   "title": "Stolik Marty",
-  "content": "Z braku atrakcyjniejszych miejsc siedzących, przysiadasz się do Marty.",
+  "content": "Wybierasz atrakcyjniejszą opcję i przysiadasz się do Marty.",
   "goto": [
     7
   ]
  },
  {
   "title": "Stolik Kacpra",
-  "content": "Z jakiegoś niewyjaśnionego powodu, przysiadasz się do Kacpra.",
+  "content": "Z jakiegoś niewyjaśnionego powodu, przysiadasz się do Kacpra. Jego na wpół łyse czoło wydaje się być jeszcze bardziej spocone i lepkie z bliska. Przglądasz się chwilę tabelkom obrazującym strukturę płac i zatrudnienia, ale spostrzegwszy to, Kacper nerwowo zaczął je zakrywać własnym ciałem, jak gdyby od tych kilku kartek zależało jego życie: \n \n — Nie masz do tego uprawnień — zaskrzeczał. \n \n **1.** Zmieniam zdanie, już mam go dosyć. \n **2.** Walczę ze wstrętem i dosiadam się do stolika.",
   "goto": [
-    7
+    7,
+    8
   ]
  },
  {
@@ -59,6 +60,13 @@
   "goto": [
     3,
     4
+  ]
+ },
+ {
+  "title": "Stolik Kacpra",
+  "content": "— Też jest mi bardzo miło cię widzieć — mówisz z wymuszonej grzeczności. \n \n ",
+  "goto": [
+    7
   ]
  }
 ]
