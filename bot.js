@@ -34,7 +34,6 @@ client.on('message', msg => {
 	
 	switch(args[0].slice(1)) {	
 		case 'pomoc':
-		case 'help':
 			help(msg, args);
 		break;
 		case 'tag':
