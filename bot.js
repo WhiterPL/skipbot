@@ -32,23 +32,29 @@ client.on('message', msg => {
 	
 	var args = msg.content.split(' ');
 	
-	switch(args[0].slice(1)) {
+	switch(args[0].slice(1)) {	
 		case 'pomoc':
+		case 'help':
 			help(msg, args);
 		break;
 		case 'tag':
+		case 't':
 			tagScp(msg, args);
 		break;
 		case 'rand':
+		case 'r':
 			randomScp(msg, args[1]);
 		break;
 		case 'scp':
+		case 's':
 			searchScp(msg, args);
 		break;
 		case 'wiki':
+		case 'w':
 			searchWiki(msg, args);
 		break;
 		case 'scpfuel':
+		case 'sf':
 			fuelScp(msg, args);
 		break;
 		case 'post':
