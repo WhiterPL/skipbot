@@ -24,7 +24,7 @@ app.listen(port, "0.0.0.0", function() {
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
-	client.user.setActivity("!pomoc");
+	client.user.setActivity("o życie | !pomoc");
 });
 
 client.on('message', msg => {
