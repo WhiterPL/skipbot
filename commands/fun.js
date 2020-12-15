@@ -92,11 +92,13 @@ var fun = function(msg, args) {
 			desc = "Z Kasprowem sobie poradziłem, to i ciebie rozwalę.";
 		break;
 	}
-
-	msg.channel.send(new Discord.MessageEmbed()
+	if(desc.length > 0) {
+		msg.channel.send(new Discord.MessageEmbed()
   			    		.setColor('#21d92a')
   			    		.setTitle(title)
   			    		.setDescription(desc));
+	}
+	
 };
 
 module.exports = fun;
