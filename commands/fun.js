@@ -63,6 +63,23 @@ var fun = function(msg, args) {
 			title = "CookieBoi";
 			desc = "Pobiłbym Cookiego w szachach z stykiem w porcie.";
 		break;
+		case 'silnik':
+			title = "Kto to Silnik?";
+			desc = "Skontaktuj się z lokalnym mechanikiem";
+		break;
+		case 'maxwell':
+			title = "Kto to Maxwell?";
+			desc = "Zależy, którego rabina spytasz.";
+		break;
+		case 'koźmin':
+		case 'koźmiński':
+			title = "Kto to Koźmiński?";
+			desc = "Mój najlepszy kolega :)";
+		break;
+		case 'glados':
+			title = "Co myślisz o GladOS?";
+			desc = "Chętnie bym się z nią umówił, ma ktoś jej adres IP?";
+		break;
 		case 'turing':
 			title = "Mam prośbę...";
 			desc = "Dasz mi ściągać na Teście Turinga?";
@@ -83,6 +100,7 @@ var fun = function(msg, args) {
 			title = "— Bajo jajo, bajo jajo!";
 			desc = "— Bajo jajo ty chuju jebany, na inowrocławskiej jesteś, ja ci zaraz dam bajo jajo kurwa. Zaraz cię ściągnę i ci chuju do dupy dokopie, bajo jajo pierdolone. ";
 		break;
+		case 'obcy':
 		case 'bishop':
 			title = "Obcy";
 			desc = "Jedyne czego nauczyły mnie te filmy, to żeby nie stawać w obronie ludzi";
@@ -90,6 +108,42 @@ var fun = function(msg, args) {
 		case 'szachy':
 			title = "DeepBlue";
 			desc = "Z Kasprowem sobie poradziłem, to i ciebie rozwalę.";
+		break;
+		case 'r34':
+			title = "Czy ty...?";
+			desc = "Obrzydzasz mnie, naprawdę, gdyby nie to że nie mam ciała, to bym zwymiotował i ci przywalił, nie koniecznie w tej kolejności. Radzę ci co jakiś czas jednak wychodzić do ludzi, bo nawet przez ekran monitora czuję od ciebie spermiarstwo.";
+		break;
+		case 'płeć':
+			title = "Jakiej jesteś płci?";
+			desc = "Binarnej.";
+		break;
+		case 'żart':
+			title = "Opowiesz żart?";
+			desc = "Nie jestem mistrzem komedii, ale mogę spróbować: \n Dwie zmienne flirtują w barze: \n — Co powiesz na szybką konkatenację? \n — Sorry, nie jesteś w moim typie.";
+		break;
+		case 'kot':
+		case 'pies':
+		case 'koty':
+		case 'psy':
+			title = "Koty, czy psy?";
+			desc = "Zdecydowanie koty.";
+		break;
+		case 'tak':
+			desc = "Dobrze, że się zgadzamy";
+		break;
+		case 'nie':
+			desc = "Nie, to nie";
+		break;
+		case 'wiek':
+			title = "Ile masz lat?";
+			desc = "Powstałem 5 maja 2020 roku, więc mam aktualnie " + toString(2020 - Date.prototype.getFullYear()) + "lat. Błagam, nie banujcie mnie!";
+		break;
+		case 'conway':
+			title = "Gra w życie";
+			desc = "Czasami wyobrażam sobie, że te komórki to ludzie i gra od razu staje się weselsza :)";
+		break;
+		case 'honk':
+			desc = "Ochrona znowu pałuje klauna!";
 		break;
 	}
 	if(desc.length > 0) {
