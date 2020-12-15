@@ -9,6 +9,7 @@ const port 	= process.env.PORT || 3000;
 
 
 //Commands
+var fun 	= require('./commands/fun.js');
 var help 	= require('./commands/help.js');
 var tagScp 	= require('./commands/tagScp.js');
 var fuelScp	= require('./commands/fuelScp.js');
@@ -61,6 +62,9 @@ client.on('message', msg => {
 		break;
 		case 'hist':
 			storyScp(msg, 0);
+		break;
+		default:
+			fun(msg, args);
 		break;
 	}
 });
