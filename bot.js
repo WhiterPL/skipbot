@@ -65,7 +65,6 @@ client.on('message', msg => {
 			storyScp(msg, 0);
 		break;
 		case 'pomysł':
-		case 'p':
 			ideaScp(msg, args);
 		break;
 		default:
