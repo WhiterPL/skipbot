@@ -13,6 +13,7 @@ var fun 	= require('./commands/fun.js');
 var help 	= require('./commands/help.js');
 var tagScp 	= require('./commands/tagScp.js');
 var fuelScp	= require('./commands/fuelScp.js');
+var ideaScp = require('./commands/ideaScp.js');
 var storyScp	= require('./commands/storyScp.js');
 var randomScp 	= require('./commands/randomScp.js');
 var searchScp	= require('./commands/searchScp.js');
@@ -62,6 +63,10 @@ client.on('message', msg => {
 		break;
 		case 'hist':
 			storyScp(msg, 0);
+		break;
+		case 'pomysł':
+		case 'p':
+			ideaScp(msg, args);
 		break;
 		default:
 			fun(msg, args);

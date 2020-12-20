@@ -1,0 +1,18 @@
+const Discord = require('discord.js');
+const ideaFile = require('./assets/words.json');
+
+var ideaScp = function(msg, args) {
+	msg.channel.send(new DiscordEmbed()
+						.setColor('#21d92a')
+						.setTitle('💡 Pomysł na skipa!')
+						.setDescription(
+							`Obiekt, który jest ${ideaFile.object[Math.floor((Math.random() * ideaFile.object.length))]}, ` +
+							`${ideaFile.descriptor[Math.floor((Math.random() * ideaFile.descriptor.length))]} i ` +
+							`opierający się na ${ideaFile.theme[Math.floor((Math.random() * ideaFile.theme.length))]}.`
+						)
+	);
+
+	console.log(`${msg.author.username}: pomysl`);
+}
+
+module.exports = ideaScp;
