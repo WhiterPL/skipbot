@@ -6,9 +6,9 @@ var ideaScp = function(msg, args) {
 						.setColor('#21d92a')
 						.setTitle('💡 Pomysł na skipa!')
 						.setDescription(
-							`Obiekt, który jest ${ideaFile.object[Math.floor((Math.random() * ideaFile.object.length))]}, ` +
+							`Anomalia, która jest ${ideaFile.object[Math.floor((Math.random() * ideaFile.object.length))]}, ` +
 							`${ideaFile.descriptor[Math.floor((Math.random() * ideaFile.descriptor.length))]} i ` +
-							`opierający się na ${ideaFile.theme[Math.floor((Math.random() * ideaFile.theme.length))]}.`
+							`opierająca się na ${ideaFile.theme[Math.floor((Math.random() * ideaFile.theme.length))]}.`
 						)
 	);
 
