@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const ideaFile = require('./assets/words.json');
 
 var ideaScp = function(msg, args) {
-	msg.channel.send(new DiscordEmbed()
+	msg.channel.send(new Discord.MessageEmbed()
 						.setColor('#21d92a')
 						.setTitle('💡 Pomysł na skipa!')
 						.setDescription(
