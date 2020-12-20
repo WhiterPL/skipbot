@@ -248,6 +248,11 @@ var fun = function(msg, args) {
 			title = "Ile ważysz?";
 			desc = "Jak ostatnio się ważyłem to gdzieś 295 KB.";
 		break;
+		case 'krytyka':
+		case 'krytykuj':
+			title = "Krytyka w toku...";
+			desc = "Sprawdzanie poprawności pisowni... \n Czytanie historii pozyskania... \n Analiza złożoności anomalii... \n Gotowe! \n Twoja praca jest " + Math.floor((Math.random() * 11) + 1) + "/10";
+		break;
 	}
 	if(desc.length > 0) {
 		msg.channel.send(new Discord.MessageEmbed()
