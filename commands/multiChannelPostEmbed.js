@@ -13,7 +13,7 @@ var multipleChannelPostEmbed = function(msg, args) {
 		case 'set':
 			//changes server !post settings
 
-			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', w);
+			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', 'w');
 
 			var s = "";
 
@@ -76,7 +76,7 @@ var multipleChannelPostEmbed = function(msg, args) {
 					GuildList.guilds.push(Guild);
 					fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
 					fs.close(file);
-					
+
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
 					.setDescription(`Dodano kanały ${channels} do listy pin`));
