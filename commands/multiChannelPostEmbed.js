@@ -1,5 +1,5 @@
 const Discord 	= require('discord.js');
-const postEmbed	= require('./commands/postEmbed.js');
+const postEmbed	= require('./postEmbed.js');
 const fs = require('fs');
 
 //Posts embeded messages on specific channels
