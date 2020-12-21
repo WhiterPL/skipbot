@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 var postEmbed = function(msg, args) {
-  if(msg.member.roles.cache.some(role => role.permissions.has(PermissionResolvable.FLAGS.ADMINISTRATOR)) && args[1] != null) {
+  if(msg.member.roles.cache.some(role => role.permissions.has(0x8)) && args[1] != null) {
   
   for (var i = 3; i < args.length; i++) {
     args[2] += ` ${args[i]}`;
