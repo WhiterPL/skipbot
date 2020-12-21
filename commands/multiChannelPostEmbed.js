@@ -13,6 +13,8 @@ var multipleChannelPostEmbed = function(msg, args) {
 		case 'set':
 			//changes server !post settings
 
+			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', w);
+
 			var s = "";
 
 			for(var i = 3; i < args.lenght; i++) {
@@ -26,7 +28,10 @@ var multipleChannelPostEmbed = function(msg, args) {
 					switch(args[2].trim().toLowerCase()) {
 						case 'post':
 							Guild.postChannel = channels;
+
 							fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+							fs.close(file);
+
 							msg.channel.send(new Discord.MessageEmbed()
 							.setColor('#21d92a')
 							.setDescription(`Dodano kanały ${channels} do listy post`));
@@ -34,7 +39,10 @@ var multipleChannelPostEmbed = function(msg, args) {
 						break;
 						case 'pin':
 							Guild.pinChannel = channels;
+
 							fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+							fs.close(file);
+
 							msg.channel.send(new Discord.MessageEmbed()
 							.setColor('#21d92a')
 							.setDescription(`Dodano kanały ${channels} do listy pin`));
@@ -52,8 +60,11 @@ var multipleChannelPostEmbed = function(msg, args) {
 			switch(args[2].trim().toLowerCase()) {
 				case 'post':
 					Guild.postChannel = channels;
+
 					GuildList.guilds.push(Guild);
 					fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+					fs.close(file);
+
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
 					.setDescription(`Dodano kanały ${channels} do listy post`));
@@ -61,8 +72,11 @@ var multipleChannelPostEmbed = function(msg, args) {
 				break;
 				case 'pin':
 					Guild.pinChannel = channels;
+
 					GuildList.guilds.push(Guild);
 					fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+					fs.close(file);
+					
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
 					.setDescription(`Dodano kanały ${channels} do listy pin`));
