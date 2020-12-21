@@ -72,14 +72,14 @@ var multipleChannelPostEmbed = function(msg, args) {
 					Guild.postChannel = channels;
 					GuildList.guilds.push(Guild);
 
-					fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
-						if (err) { 
-						   return console.error(err); 
-						}
+					//fs.open("./assets/multiChannelPostEmbedSettings.json", 'w', function (err, f) { 
+					//	if (err) { 
+					//	   return console.error(err); 
+					//	}
 
 						fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
 						fs.close(file);
-					}); 
+					//}); 
 
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
@@ -90,7 +90,7 @@ var multipleChannelPostEmbed = function(msg, args) {
 					Guild.pinChannel = channels;
 					GuildList.guilds.push(Guild);
 
-					fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+					fs.open("./assets/multiChannelPostEmbedSettings.json", 'w', function (err, f) { 
 						if (err) { 
 						   return console.error(err); 
 						}
