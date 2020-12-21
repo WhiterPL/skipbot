@@ -7,7 +7,7 @@ const fs = require('fs');
 var multipleChannelPostEmbed = function(msg, args) {
 	if(!msg.member.roles.cache.some(role => role.permissions.has(0x8))) return;
 
-	var GuildList = require('/assets/multiChannelPostEmbedSettings.json');
+	var GuildList = require('./assets/multiChannelPostEmbedSettings.json');
 
 	switch(args[1].trim().toLowerCase()) {
 		case 'set':
