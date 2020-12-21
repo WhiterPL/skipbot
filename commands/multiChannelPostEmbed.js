@@ -21,7 +21,7 @@ var multipleChannelPostEmbed = function(msg, args) {
 
 			var channels = s.split(" ");
 			
-			for(var Guild in Guild.guilds) {
+			for(var Guild in GuildList.guilds) {
 				if(Guild.id == msg.guild.id) {
 					switch(args[2].trim().toLowerCase()) {
 						case 'post':
