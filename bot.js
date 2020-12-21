@@ -17,7 +17,7 @@ var ideaScp = require('./commands/ideaScp.js');
 var storyScp	= require('./commands/storyScp.js');
 var randomScp 	= require('./commands/randomScp.js');
 var searchScp	= require('./commands/searchScp.js');
-var postEmbed	= require('./commands/postEmbed.js');
+var postEmbed	= require('./commands/multiChannelPostEmbed.js');
 var searchWiki	= require('./commands/searchWiki.js');
 
 app.listen(port, "0.0.0.0", function() {
@@ -30,7 +30,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-	if (msg.author.bot || !msg.content.startsWith('!')){return;}
+	if (msg.author.bot || !msg.content.startsWith('!')) return;
 	
 	var args = msg.content.split(' ');
 	
