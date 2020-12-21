@@ -13,13 +13,8 @@ var multipleChannelPostEmbed = function(msg, args) {
 		case 'set':
 			//changes server !post settings
 
-			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
-				if (err) { 
-				   return console.error(err); 
-				}}); 
-
 			var s = "";
-				
+
 			for(var i = 3; i < args.lenght; i++) {
 				s += args[i] + " ";
 			}
@@ -32,8 +27,14 @@ var multipleChannelPostEmbed = function(msg, args) {
 						case 'post':
 							Guild.postChannel = channels;
 
-							fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
-							fs.close(file);
+							fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+								if (err) { 
+								   return console.error(err); 
+								}
+								fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+								fs.close(file);
+							}); 
+							
 
 							msg.channel.send(new Discord.MessageEmbed()
 							.setColor('#21d92a')
@@ -43,9 +44,15 @@ var multipleChannelPostEmbed = function(msg, args) {
 						case 'pin':
 							Guild.pinChannel = channels;
 
-							fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
-							fs.close(file);
+							fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+								if (err) { 
+								   return console.error(err); 
+								}
 
+								fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+								fs.close(file);
+							}); 
+							
 							msg.channel.send(new Discord.MessageEmbed()
 							.setColor('#21d92a')
 							.setDescription(`Dodano kanały ${channels} do listy pin`));
@@ -63,10 +70,16 @@ var multipleChannelPostEmbed = function(msg, args) {
 			switch(args[2].trim().toLowerCase()) {
 				case 'post':
 					Guild.postChannel = channels;
-
 					GuildList.guilds.push(Guild);
-					fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
-					fs.close(file);
+
+					fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+						if (err) { 
+						   return console.error(err); 
+						}
+
+						fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+						fs.close(file);
+					}); 
 
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
@@ -75,10 +88,16 @@ var multipleChannelPostEmbed = function(msg, args) {
 				break;
 				case 'pin':
 					Guild.pinChannel = channels;
-
 					GuildList.guilds.push(Guild);
-					fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
-					fs.close(file);
+
+					fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+						if (err) { 
+						   return console.error(err); 
+						}
+
+						fs.writeFileSync("./assets/multiChannelPostEmbedSettings.json", GuildList);
+						fs.close(file);
+					}); 
 
 					msg.channel.send(new Discord.MessageEmbed()
 					.setColor('#21d92a')
