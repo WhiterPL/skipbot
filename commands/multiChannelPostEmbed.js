@@ -13,10 +13,13 @@ var multipleChannelPostEmbed = function(msg, args) {
 		case 'set':
 			//changes server !post settings
 
-			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', 'w');
+			var file = fs.open('./assets/multiChannelPostEmbedSettings.json', 'w', function (err, f) { 
+				if (err) { 
+				   return console.error(err); 
+				}}); 
 
 			var s = "";
-
+				
 			for(var i = 3; i < args.lenght; i++) {
 				s += args[i] + " ";
 			}
