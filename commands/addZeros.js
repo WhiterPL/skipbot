@@ -1,3 +1,5 @@
+//Used to add zeroes in SCP links or titles
+
 var addZeros = function(s) {
   if (s.length < 3) {
     do { 
@@ -6,4 +8,5 @@ var addZeros = function(s) {
   } 
   return s;
 };
+
 module.exports = addZeros;

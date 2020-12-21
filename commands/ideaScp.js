@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const ideaFile = require('./assets/words.json');
 
+//Gets random SCP idea from JSON file
+
 var ideaScp = function(msg, args) {
 	msg.channel.send(new Discord.MessageEmbed()
 						.setColor('#21d92a')

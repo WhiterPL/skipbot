@@ -5,6 +5,8 @@ const replaceChars = require('./replaceChars.js');
 const google = process.env.GOOGLE;
 const googlen = process.env.GOOGLEN;
 
+//Serches phrase in Google CSE
+
 var wiki = function(msg, args) {
   if (args.length > 2) for (var i = 2; i <= args.length-1; i++) {
     args[1] = `${args[1]} ${args[i]}`;

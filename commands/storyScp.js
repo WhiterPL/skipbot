@@ -14,6 +14,8 @@ const emotes = [
     "0️⃣",
   ];
 
+//Interactive text adventure generated from JSON file
+
 var storyScp = function(msg, args) {
 	
   var story = new Discord.MessageEmbed()

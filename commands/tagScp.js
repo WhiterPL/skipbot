@@ -1,5 +1,7 @@
 const Discord 	= require('discord.js');
 
+//Gets pages with specific tag
+
 var tagScp = function(msg, args) {
   if (args.length == 2) {
     console.log(`${msg.author.username}: tag ${args[1]}`);

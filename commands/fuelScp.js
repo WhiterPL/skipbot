@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const request = require('request');
 
+//Gets random images from Wikimedia with appropriate license (Public Domain, CC0, CC BY-SA 3.0, CC BY-SA 4.0)
+
 var fuelScp = function(msg, args) {
   LookForImage();
   function LookForImage() {

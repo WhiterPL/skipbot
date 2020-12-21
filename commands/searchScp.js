@@ -1,6 +1,8 @@
 const Discord 	= require('discord.js');
 const addZeros 	= require('./addZeros.js');
 
+//Gets specific SCP article from Polish or English wiki
+
 function setDetails(s, details) {
 	// ANG WIKI
 	if(s.startsWith('o')) {

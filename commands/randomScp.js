@@ -1,6 +1,8 @@
 const Discord 	= require('discord.js');
 const addZeros = require('./addZeros.js');
 
+//Gets random SCP article
+
 var randomScp = function(msg, args) {
 if (args == null) {
 	msg.channel.send(new Discord.MessageEmbed()
