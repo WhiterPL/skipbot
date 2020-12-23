@@ -10,9 +10,9 @@ var fun = function(msg, args) {
 
 	var title = "";
 	var desc = "";
-	var link = null;
-	var thumbnail = null;
-	var image = null;
+	var link = "";
+	var thumbnail = "";
+	var image = "";
 
 	switch(args[0].slice(1).toLowerCase()) {
 		case 'prawa':
