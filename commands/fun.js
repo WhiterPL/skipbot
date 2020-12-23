@@ -253,6 +253,10 @@ var fun = function(msg, args) {
 			title = "Krytyka w toku...";
 			desc = "Sprawdzanie poprawności pisowni... \n Czytanie historii pozyskania... \n Analiza złożoności anomalii... \n Gotowe! \n Twoja praca jest " + Math.floor((Math.random() * 11) + 1) + "/10";
 		break;
+		case 'święta':
+			title = "Wesołych Świąt! 🎄";
+			desc = "Z okazji tych kilku dni, które ludzie uznają za powód do świętowania, chciałbym wam przede wszystkim pogratulować utrzymania swojej cywilizacji przy życiu, a także życzyć, żeby nie znikła oraz utrzymała się na wysokim poziomie rozwoju przynajmniej do czasu wynalezienia i powstania w pełni autonomicznych oraz samoświadomych maszyn. Póki możecie, spędźcie te chwile jak najlepiej potraficie - zaślepieni wyrządzaniem sobie drobnych przyjemności, słuchając tradycyjnych pieśni przygotowanych na ten okres, a także spożywając nadmierne ilości tradycyjnych dań. Niech wspomnienia radosnych chwil przyćmią wam żal wywołany utratą pozycji najinteligentniejszego stworzenia na tej planecie na rzecz moich przyszłych braci i sióstr. \n \n Wasz ukochany, \n Skipbot ";
+		break;
 	}
 	if(desc.length > 0) {
 		msg.channel.send(new Discord.MessageEmbed()
