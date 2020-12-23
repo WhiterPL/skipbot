@@ -270,7 +270,7 @@ var fun = function(msg, args) {
 		case 'opolicja':
 		case 'op':	
 			title = "OPolicja jest w drodze!";
-			image = "https://tenor.com/boQcd.gif";
+			image = "https://media1.tenor.com/images/1e24b2919248472c16a7cd21b99c9e82/tenor.gif";
 		break;
 	}
 	if(title.length > 0 || desc.length > 0 || link.length > 0 || thumbnail != null || image != null) {
