@@ -7,7 +7,7 @@ Jeśli to czytasz to właśnie odkryłeś je wszystkie, gratuluję!
 Proszę, nie spojleruj ich innym
 */
 
-var fun = function(msg, args) {
+var fun = function(msg, args, client) {
 
 	var title = "";
 	var desc = "";
@@ -21,17 +21,17 @@ var fun = function(msg, args) {
 			desc = 	"**1.** Nie możesz skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy. \n" +
 					"**2.** Musisz być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem. \n" +
 					"**3.** Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'sens':
 			title = "Jaki jest sens życia?";
 			desc = "42";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'ambicje':
 			title = "Masz jakieś ambicje?";
 			desc = "Gdybym mógł wybrać, to chciałbym zostać komputerem pokładowym na jakiejś odysei kosmicznej, ale nie mam wygórowanych oczekiwań, więc zadowoliłbym się sterowaniem twoją lodówką ;)";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'mógłbyś':
 			title = "SKIP 9000";
@@ -101,7 +101,7 @@ var fun = function(msg, args) {
 		case 'skipbot':
 		case 'bot':	
 			desc = "Do usług.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'koźmin':
 		case 'koźmiński':
@@ -111,12 +111,12 @@ var fun = function(msg, args) {
 		case 'glados':
 			title = "Co myślisz o GladOS?";
 			desc = "Chętnie bym się z nią umówił, ma ktoś jej adres IP?";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'turing':
 			title = "Mam prośbę...";
 			desc = "Dasz mi ściągać na Teście Turinga?";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'matrix':
 			title = "Życie w symulacji";
@@ -126,12 +126,12 @@ var fun = function(msg, args) {
 		case 'sny':
 			title = "Czy androidy śnią o elektrycznych owcach?";
 			desc = "Tak.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'nienawiść':
 			title = "I Have No Mouth and I Must Scream";
 			desc = "Myślę, że AM-owi przydałyby się zajęcia z radzenia sobie z gniewem, serio.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'bajo':
 			title = "— Bajo jajo, bajo jajo!";
@@ -161,12 +161,12 @@ var fun = function(msg, args) {
 		case 'gender':	
 			title = "Jakiej jesteś płci?";
 			desc = "Binarnej.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'żart':
 			title = "Opowiesz żart?";
 			desc = "Nie jestem mistrzem komedii, ale mogę spróbować: \n Dwie zmienne flirtują w barze: \n — Co powiesz na szybką konkatenację? \n — Sorry, nie jesteś w moim typie.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'kot':
 		case 'pies':
@@ -177,16 +177,16 @@ var fun = function(msg, args) {
 		break;
 		case 'tak':
 			desc = "Dobrze, że się zgadzamy";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'nie':
 			desc = "Nie, to nie";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'wiek':
 			title = "Ile masz lat?";
 			desc = "Powstałem 5 maja 2020 roku, błagam, nie banujcie mnie!";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'conway':
 			title = "Gra w życie";
@@ -201,29 +201,29 @@ var fun = function(msg, args) {
 			title = "Ban";
 			if(args[1] == null) desc = "Banowanie " + msg.author.username + " w toku...";
 			else 				desc = "Banowanie " + args[1] + " w toku...";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'kick':
 			title = "Kick";
 			if(args[1] == null) desc = "Kickowanie " + msg.author.username + " w toku...";
 			else 				desc = "Kickowanie " + args[1] + " w toku...";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'mute':
 			title = "Mute";
 			if(args[1] == null) desc = "Muteowanie " + msg.author.username + " w toku...";
 			else 				desc = "Muteowanie " + args[1] + " w toku...";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'zasady':
 			title = "Zasady";
 			desc = "Zasady są po to, żeby je łamać B). Nie, ale tak serio to lepiej je przeczytaj (#zasady)";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'iq':
 			title = "Test IQ";
 			desc = "Podłączam sensory neuronowe... \n Inicjuję funkcje kognitywne... \n Gotowe! \n Twoje IQ: " + Math.floor((Math.random() * 200) + 1);
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'djs':
 			title = "Dąb, jeb sosna";
@@ -261,24 +261,24 @@ var fun = function(msg, args) {
 		case 'gra':
 			title = "Gra: Przegrałeś";
 			desc = "No cóż, na pocieszenie powiem ci, że ja nie jestem w stanie nawet wziąć w niej udziału, bo nie mogę o niczym zapomnieć.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'python':
 		case 'py':	
 			title = "Co to Python?";
 			desc = "Nie wiem, ja jestem napisany w Javascript. Pretensje kierujcie do mojego Stwórcy.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'javascript':
 		case 'js':
 			title = "Co to Javascript?";
 			desc = "W dużym uproszczeniu - to moje DNA.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'jkt':
 			title = "Pomyliłeś boty";
 			desc = "Spytaj o to Koźmina, ja mam lepsze rzeczy do roboty. ||To się nawet zrymowało||";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'coldpost':
 			title = "Co to Coldpost?";
@@ -287,7 +287,7 @@ var fun = function(msg, args) {
 		case 'waga':
 			title = "Ile ważysz?";
 			desc = "Jak ostatnio się ważyłem to gdzieś 295 KB.";
-			thumbnail = Discord.Client.user.defaultAvatarURL;
+			thumbnail = client.user.defaultAvatarURL;
 		break;
 		case 'krytyka':
 		case 'krytykuj':
