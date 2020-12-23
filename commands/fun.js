@@ -270,7 +270,7 @@ var fun = function(msg, args) {
 		case 'opolicja':
 		case 'op':	
 			title = "OPolicja jest w drodze!";
-			image = "https://media.discordapp.net/attachments/396984813787283456/790890762292035633/ss.png";
+			thumbnail = "https://media.discordapp.net/attachments/396984813787283456/790890762292035633/ss.png";
 		break;
 	}
 	if(desc.length > 0) {
