@@ -267,6 +267,7 @@ var fun = function(msg, args) {
 	}
 	if(desc.length > 0) {
 		postEmbed(msg.channel, title, desc)
+	}	
 };
 
 module.exports = fun;
