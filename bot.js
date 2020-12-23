@@ -67,7 +67,7 @@ client.on('message', msg => {
 			ideaScp(msg, args);
 		break;
 		default:
-			fun(msg, args, client);
+			fun(msg, args);
 		break;
 	}
 });
