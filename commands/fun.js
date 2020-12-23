@@ -165,7 +165,7 @@ var fun = function(msg, args) {
 		break;
 		case 'wiek':
 			title = "Ile masz lat?";
-			desc = "Powstałem 5 maja 2020 roku, więc mam aktualnie " + 2020 - Date.prototype.getFullYear() + "lat. Błagam, nie banujcie mnie!";
+			desc = "Powstałem 5 maja 2020 roku, błagam, nie banujcie mnie!";
 		break;
 		case 'conway':
 			title = "Gra w życie";
