@@ -184,6 +184,11 @@ var fun = function(msg, args) {
 			if(args[1] == null) desc = "Kickowanie " + msg.author.username + " w toku...";
 			else 				desc = "Kickowanie " + args[1] + " w toku...";
 		break;
+		case 'mute':
+			title = "Mute";
+			if(args[1] == null) desc = "Muteowanie " + msg.author.username + " w toku...";
+			else 				desc = "Muteowanie " + args[1] + " w toku...";
+		break;
 		case 'zasady':
 			title = "Zasady";
 			desc = "Zasady są po to, żeby je łamać B). Nie, ale tak serio to lepiej je przeczytaj (#zasady)";
