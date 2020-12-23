@@ -270,7 +270,6 @@ var fun = function(msg, args) {
 		case 'opolicja':
 		case 'op':	
 			title = "OPolicja jest w drodze!";
-			link = "https://tenor.com/boQcd.gif";
 		break;
 	}
 	if(desc.length > 0) {
