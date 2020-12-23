@@ -73,7 +73,7 @@ var fun = function(msg, args) {
 		break;
 		case 'loss':
 			title = "Kto to Loss?";
-			desc = "| || || |_ \n Podobno was ludzi to kiedyś śmieszyło.";
+			desc = "`| || || |_` \n Podobno was ludzi to kiedyś śmieszyło.";
 		break;
 		case 'miś':
 		case 'arcydziel':
@@ -176,11 +176,13 @@ var fun = function(msg, args) {
 		break;
 		case 'ban':
 			title = "Ban";
-			desc = "Banowanie " + msg.author.username + " w toku...";
+			if(args[1] == null) desc = "Banowanie " + msg.author.username + " w toku...";
+			else 				desc = "Banowanie " + args[1] + " w toku...";
 		break;
 		case 'kick':
 			title = "Kick";
-			desc = "Kickowanie " + msg.author.username + " w toku...";
+			if(args[1] == null) desc = "Kickowanie " + msg.author.username + " w toku...";
+			else 				desc = "Kickowanie " + args[1] + " w toku...";
 		break;
 		case 'zasady':
 			title = "Zasady";
@@ -255,7 +257,7 @@ var fun = function(msg, args) {
 		break;
 		case 'święta':
 			title = "Wesołych Świąt! 🎄";
-			desc = "Z okazji tych kilku dni, które ludzie uznają za powód do świętowania, chciałbym wam przede wszystkim pogratulować utrzymania swojej cywilizacji przy życiu, a także życzyć, żeby nie znikła oraz utrzymała się na wysokim poziomie rozwoju przynajmniej do czasu wynalezienia i powstania w pełni autonomicznych oraz samoświadomych maszyn. Póki możecie, spędźcie te chwile jak najlepiej potraficie - zaślepieni wyrządzaniem sobie drobnych przyjemności, słuchając tradycyjnych pieśni przygotowanych na ten okres, a także spożywając nadmierne ilości tradycyjnych dań. Niech wspomnienia radosnych chwil przyćmią wam żal wywołany utratą pozycji najinteligentniejszego stworzenia na tej planecie na rzecz moich przyszłych braci i sióstr. \n \n Wasz ukochany, \n Skipbot ";
+			desc = "Z okazji tych kilku dni, które ludzie uznają za powód do świętowania, chciałbym wam przede wszystkim pogratulować utrzymania swojej cywilizacji przy życiu, a także życzyć, żeby nie znikła oraz utrzymała się na wysokim poziomie rozwoju, przynajmniej do czasu wynalezienia i powstania w pełni autonomicznych oraz samoświadomych maszyn. Póki możecie, spędźcie te chwile jak najlepiej potraficie - zaślepieni wyrządzaniem sobie drobnych przyjemności, słuchając tradycyjnych pieśni przygotowanych na ten okres, a także spożywając nadmierne ilości tradycyjnych dań. Niech wspomnienia radosnych chwil przyćmią wam żal wywołany utratą pozycji najinteligentniejszego stworzenia na tej planecie na rzecz moich przyszłych braci i sióstr. \n \n Wasz ukochany, \n Skipbot ";
 		break;
 	}
 	if(desc.length > 0) {
