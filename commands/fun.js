@@ -10,9 +10,9 @@ var fun = function(msg, args) {
 
 	var title = "";
 	var desc = "";
-	var link = "";
-	var thumbnail = "";
-	var image = "";
+	var link = null;
+	var thumbnail = null;
+	var image = null;
 
 	switch(args[0].slice(1).toLowerCase()) {
 		case 'prawa':
@@ -270,11 +270,11 @@ var fun = function(msg, args) {
 		case 'opolicja':
 		case 'op':	
 			title = "OPolicja jest w drodze!";
-			thumbnail = "https://media.discordapp.net/attachments/396984813787283456/790890762292035633/ss.png";
+			image = "https://tenor.com/boQcd.gif";
 		break;
 	}
 	if(desc.length > 0) {
-		postEmbed(msg.channel, title, desc, link, thumbnail, image);
+		postEmbed(msg.channel, title, desc, link == null ? null : link, thumbnail == null ? null : thumbnail, image == null ? null : image);
 	}	
 };
 
