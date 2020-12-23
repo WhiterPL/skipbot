@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
 const request = require('request');
+const postEmbed = require("./postEmbed.js");
 const replaceChars = require('./replaceChars.js');
 
 const google = process.env.GOOGLE;
@@ -22,27 +22,17 @@ var wiki = function(msg, args) {
           var link  = await body.items[0].link;
           var desc  = await body.items[0].snippet;
           var title = await body.items[0].title;
-          msg.channel.send(new Discord.MessageEmbed()
-          	.setColor('#21d92a')
-          	.setTitle(title)
-          	.setURL(link)
-          	.setDescription(desc));
+
+          postEmbed(msg.channel, title, desc, link);
           console.log(`${msg.author.username}: ${args[1]}`);
+
         } catch (e) {
-          msg.channel.send(new Discord.MessageEmbed()
-            .setColor('#21d92a')
-            .setTitle(args[1])
-            .setURL(`http://scp-wiki.net.pl/search:site/a/p/q/${args[1]}`)
-            .setDescription(`Wyszukania dla strony: ${args[1]}`));
+          postEmbed(msg.channel, args[1], `Wyszukania dla strony: ${args[1]}`, `http://scp-wiki.net.pl/search:site/a/p/q/${args[1]}`);
           console.log(`${msg.author.username}: ${args[1]} ${response.statusCode}`);
         }          
       }
 			else {
-			  msg.channel.send(new Discord.MessageEmbed()
-          .setColor('#21d92a')
-          .setTitle(args[1])
-          .setURL(`http://scp-wiki.net.pl/search:site/a/p/q/${args[1]}`)
-          .setDescription(`Wyszukania dla strony: ${args[1]}`));
+        postEmbed(msg.channel, args[1], `Wyszukania dla strony: ${args[1]}`, `http://scp-wiki.net.pl/search:site/a/p/q/${args[1]}`);
         console.log(`${msg.author.username}: ${args[1]} ${response.statusCode}`);
 	    }
     });

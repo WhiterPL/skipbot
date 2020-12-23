@@ -1,4 +1,4 @@
-const Discord 	= require('discord.js');
+const postEmbed = require("./postEmbed.js");
 
 /*
 Krótkie komendy bez faktycznej funkcjonalności, tak zwane easter eggi
@@ -266,12 +266,7 @@ var fun = function(msg, args) {
 		break;
 	}
 	if(desc.length > 0) {
-		msg.channel.send(new Discord.MessageEmbed()
-  			    		.setColor('#21d92a')
-  			    		.setTitle(title)
-  			    		.setDescription(desc));
-	}
-	
+		postEmbed(msg.channel, title, desc)
 };
 
 module.exports = fun;

@@ -59,7 +59,7 @@ client.on('message', msg => {
 			fuelScp(msg, args);
 		break;
 		case 'post':
-			postEmbed(msg, args);
+			//postEmbed(msg, args);
 		break;
 		case 'hist':
 			storyScp(msg, 0);

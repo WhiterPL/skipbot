@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
 const request = require('request');
+const postEmbed = require("./postEmbed.js");
 
 //Gets random images from Wikimedia with appropriate license (Public Domain, CC0, CC BY-SA 3.0, CC BY-SA 4.0)
 
@@ -17,18 +17,17 @@ var fuelScp = function(msg, args) {
                          json: true
                          }, async function (error, response, checkImage) {
                             try {
-                               var license = await checkImage.query.pages[id].imageinfo[0].extmetadata.LicenseShortName.value;
-                               var title = await checkImage.query.pages[id].title;
-                               if ((license.includes('Public domain') || license.includes('CC BY-SA 3.0') || license.includes('CC BY-SA 4.0') || license.includes('CC0')) && (title.includes('.jpg') || title.includes('.png'))) {
+                              var license = await checkImage.query.pages[id].imageinfo[0].extmetadata.LicenseShortName.value;
+                              var title = await checkImage.query.pages[id].title;
+                              if ((license.includes('Public domain') || license.includes('CC BY-SA 3.0') || license.includes('CC BY-SA 4.0') || license.includes('CC0')) && (title.includes('.jpg') || title.includes('.png'))) {
+                                  title = title.replace(/ /g, "_");
+                                  var image = `https://commons.wikimedia.org/wiki/Special:FilePath/${title.slice(5)}`;
+                                  var link = 'https://commons.wikimedia.org/wiki/'+ title;
+                                 
+                                  postEmbed(msg.channel, "Skip Fuel", "", link, null, image);
                                   
-                                 title = title.replace(/ /g, "_");
-                                 var img = `https://commons.wikimedia.org/wiki/Special:FilePath/${title.slice(5)}`;
-                                       msg.channel.send(new Discord.MessageEmbed()
-                                           .setColor('#21d92a')
-                                           .setTitle('Skip Fuel')
-                                           .setURL('https://commons.wikimedia.org/wiki/'+ title)
-                                           .setImage(img));
-                                       console.log(`${msg.author.username}: ${id} - ${title} - ${license}`);
+                                  console.log(`${msg.author.username}: ${id} - ${title} - ${license}`);
+
                                } else { LookForImage(); }
                             } catch (e) { LookForImage(); }
                         });

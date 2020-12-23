@@ -1,4 +1,4 @@
-const Discord 	= require('discord.js');
+const postEmbed = require("./postEmbed.js");
 const addZeros 	= require('./addZeros.js');
 
 //Gets specific SCP article from Polish or English wiki
@@ -57,11 +57,7 @@ var searchScp = function(msg, args) {
 		console.log(`${msg.author.username}: ${args[1]}`);
 		details = setDetails(args[1], details);
 		try {
-			msg.channel.send(new Discord.MessageEmbed()
-				.setColor('#21d92a')
-				.setTitle(details.title)
-				.setURL(details.link));
-		
+			postEmbed(msg.channel, details.title, "", details.link);
 		} catch (e) {
 			console.log("Error " + e);
 		}
@@ -84,11 +80,7 @@ var searchScp = function(msg, args) {
 			console.log(`${msg.author.username}: ${args[i]}`);
 		}
 		try {
-			msg.channel.send(new Discord.MessageEmbed()
-				.setColor('#21d92a')
-				.setTitle('Lista SCP')
-				.setDescription(list));
-		
+			postEmbed(msg.channel, "Lista Skipów", list);
 		} catch (e) {
 			console.log("Error " + e);
 		}
