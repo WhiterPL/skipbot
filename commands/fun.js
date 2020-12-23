@@ -10,6 +10,9 @@ var fun = function(msg, args) {
 
 	var title = "";
 	var desc = "";
+	var link = null;
+	var thumbnail = null;
+	var image = null;
 
 	switch(args[0].slice(1).toLowerCase()) {
 		case 'prawa':
@@ -264,9 +267,14 @@ var fun = function(msg, args) {
 			title = "Wesołych Świąt! 🎄";
 			desc = "Z okazji tych kilku dni, które ludzie uznają za powód do świętowania, chciałbym wam przede wszystkim pogratulować utrzymania swojej cywilizacji przy życiu, a także życzyć, żeby nie znikła oraz utrzymała się na wysokim poziomie rozwoju, przynajmniej do czasu wynalezienia i powstania w pełni autonomicznych oraz samoświadomych maszyn. Póki możecie, spędźcie te chwile jak najlepiej potraficie - zaślepieni wyrządzaniem sobie drobnych przyjemności, słuchając tradycyjnych pieśni przygotowanych na ten okres, a także spożywając nadmierne ilości tradycyjnych dań. Niech wspomnienia radosnych chwil przyćmią wam żal wywołany utratą pozycji najinteligentniejszego stworzenia na tej planecie na rzecz moich przyszłych braci i sióstr. \n \n Wasz ukochany, \n Skipbot ";
 		break;
+		case 'opolicja':
+		case 'op':	
+			title = "OPolicja jest w drodze!";
+			image = "https://tenor.com/boQcd.gif";
+		break;
 	}
 	if(desc.length > 0) {
-		postEmbed(msg.channel, title, desc)
+		postEmbed(msg.channel, title, desc, link, thumbnail, image);
 	}	
 };
 
