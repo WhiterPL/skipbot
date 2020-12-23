@@ -275,6 +275,7 @@ var fun = function(msg, args) {
 	}
 	if(title.length > 0 || desc.length > 0 || link.length > 0 || thumbnail != null || image != null) {
 		postEmbed(msg.channel, title, desc, link, thumbnail, image);
+		console.log(`${msg.author.username}: ${args[0]}`);
 	}	
 };
 
