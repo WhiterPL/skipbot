@@ -274,7 +274,7 @@ var fun = function(msg, args) {
 		break;
 	}
 	if(desc.length > 0) {
-		postEmbed(msg.channel, title, desc, link == null ? null : link, thumbnail == null ? null : thumbnail, image == null ? null : image);
+		postEmbed(msg.channel, title, desc, null, null, image);
 	}	
 };
 
