@@ -8,7 +8,11 @@ var postEmbed = function(channel, title, desc, link = null, thumbnail = null, im
     .setURL(link)
     .setThumbnail(thumbnail)
     .setImage(image))
-    .then(message => pin ? message.pin() : null)
+    .then(message => {
+      if(pin) {
+        message.pin();
+      }
+    });
 };
 
 module.exports = postEmbed;
