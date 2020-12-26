@@ -40,12 +40,20 @@ var customPostEmbed = function(msg) {
 		channels = msg.content.slice(msg.content.indexOf("channels:"));
 		channels = channels.slice(9, channels.indexOf(";") == -1 ? null : channels.indexOf(";"));
 		channels = channels.split(" ");
+
+		for(var i = 0; i < channels.length; i++) {
+			channels[i] = msg.client.channels.fetch(channels[i]);
+		}
 	}
 
 	if(msg.content.includes("pins:")) {
 		pins = msg.content.slice(msg.content.indexOf("pins:"));
 		pins = pins.slice(5, pins.indexOf(";") == -1 ? null : pins.indexOf(";"));
 		pins = pins.split(" ");
+
+		for(var i = 0; i < pins.length; i++) {
+			pins[i] = msg.client.channels.fetch(pins[i]);
+		}
 	}
 
 	for(var i = 0; i < channels.length; i++) {
