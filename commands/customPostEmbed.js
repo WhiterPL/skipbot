@@ -1,7 +1,7 @@
 const postEmbed = require("./postEmbed.js");
 
 var customPostEmbed = function(msg) {
-	if(!msg.member.roles.cache.some(role => role.permissions.has(ADMINISTRATOR))) return;
+	if(!msg.member.roles.cache.some(role => role.permissions.has(0x8))) return;
 
 	var title = "";
 	var desc = "";
