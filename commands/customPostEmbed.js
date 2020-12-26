@@ -9,7 +9,7 @@ var customPostEmbed = function(msg) {
 	var thumbnail = null;
 	var image = null;
 	var channels = [msg.channel];
-	var pins = null;
+	var pins = new Array(1);
 
 	if(msg.content.includes("title:")) {
 		title = msg.content.slice(msg.content.indexOf("title:"));
