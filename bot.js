@@ -18,6 +18,7 @@ var storyScp	= require('./commands/storyScp.js');
 var randomScp 	= require('./commands/randomScp.js');
 var searchScp	= require('./commands/searchScp.js');
 var searchWiki	= require('./commands/searchWiki.js');
+var customPostEmbed = require('./commands/customPostEmbed.js');
 
 app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
@@ -58,7 +59,7 @@ client.on('message', msg => {
 			fuelScp(msg, args);
 		break;
 		case 'post':
-			//postEmbed(msg, args);
+			customPostEmbed(msg);
 		break;
 		case 'hist':
 			storyScp(msg, 0);
