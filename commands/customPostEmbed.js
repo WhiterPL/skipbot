@@ -59,7 +59,8 @@ var customPostEmbed = function(msg) {
 	for(var i = 0; i < channels.length; i++) {
 		console.log(`${msg.author.username}: ${title} ; ${desc} ; ${link} ; ${thumbnail} ; ${image} ; ${channels[i]} ; ${pins.indexOf(channels[i]) == -1 ? false : true}`);
 		msg.client.channels.fetch(channels[i])
-			.then(channel => postEmbed(channel, title, desc, link, thumbnail, image, pins.indexOf(channels[i]) == -1 ? false : true));
+			.then(channel => postEmbed(channel, title, desc, link, thumbnail, image, pins.indexOf(channels[i]) == -1 ? false : true))
+			.catch(console.error);
 		
 	}
 };
