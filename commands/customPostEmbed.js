@@ -49,8 +49,8 @@ var customPostEmbed = function(msg) {
 	}
 
 	for(var i = 0; i < channels.length; i++) {
-		postEmbed(channels[i], title, desc, link, thumbnail, image, pins.indexOf(channels[i]) == -1 ? false : true);
 		console.log(`${msg.author.username}: ${title} ; ${desc} ; ${link} ; ${thumbnail} ; ${image} ; ${channels[i]} ; ${pins.indexOf(channels[i]) == -1 ? false : true}`);
+		postEmbed(channels[i], title, desc, link, thumbnail, image, pins.indexOf(channels[i]) == -1 ? false : true);
 	}
 };
 
