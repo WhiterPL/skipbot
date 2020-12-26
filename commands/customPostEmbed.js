@@ -42,7 +42,8 @@ var customPostEmbed = function(msg) {
 		channels = channels.split(" ");
 
 		for(var i = 0; i < channels.length; i++) {
-			channels[i] = msg.client.channels.fetch(channels[i]);
+			msg.client.channels.fetch(channels[i])
+			.then(channel => channels[i] = channel);
 		}
 	}
 
@@ -52,7 +53,8 @@ var customPostEmbed = function(msg) {
 		pins = pins.split(" ");
 
 		for(var i = 0; i < pins.length; i++) {
-			pins[i] = msg.client.channels.fetch(pins[i]);
+			msg.client.channels.fetch(pins[i])
+			.then(channel => pins[i] = channel);
 		}
 	}
 
