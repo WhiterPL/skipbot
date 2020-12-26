@@ -14,31 +14,37 @@ var customPostEmbed = function(msg) {
 	if(msg.content.includes("title:")) {
 		title = msg.content.slice(msg.content.indexOf("title:"));
 		title = title.slice(6, title.indexOf(";") == -1 ? null : title.indexOf(";"));
+		title.trim();
 	}
 
 	if(msg.content.includes("desc:")) {
 		desc = msg.content.slice(msg.content.indexOf("desc:"));
 		desc = desc.slice(5, desc.indexOf(";") == -1 ? null : desc.indexOf(";"));
+		desc.trim()
 	}
 
 	if(msg.content.includes("link:")) {
 		link = msg.content.slice(msg.content.indexOf("link:"));
 		link = link.slice(5, link.indexOf(";") == -1 ? null : link.indexOf(";"));
+		link.trim();
 	}
 
 	if(msg.content.includes("thumbnail:")) {
 		thumbnail = msg.content.slice(msg.content.indexOf("thumbnail:"));
 		thumbnail = thumbnail.slice(10, thumbnail.indexOf(";") == -1 ? null : thumbnail.indexOf(";"));
+		thumbnail.trim();
 	}
 
 	if(msg.content.includes("image:")) {
 		image = msg.content.slice(msg.content.indexOf("image:"));
 		image = image.slice(6, image.indexOf(";") == -1 ? null : image.indexOf(";"));
+		image.trim();
 	}
 
 	if(msg.content.includes("channels:")) {
 		channels = msg.content.slice(msg.content.indexOf("channels:"));
 		channels = channels.slice(9, channels.indexOf(";") == -1 ? null : channels.indexOf(";"));
+		channels.trim();
 		channels = channels.split(" ");
 			
 	}
@@ -46,6 +52,7 @@ var customPostEmbed = function(msg) {
 	if(msg.content.includes("pins:")) {
 		pins = msg.content.slice(msg.content.indexOf("pins:"));
 		pins = pins.slice(5, pins.indexOf(";") == -1 ? null : pins.indexOf(";"));
+		pins.trim();
 		pins = pins.split(" ");
 	}
 
