@@ -301,11 +301,12 @@ var fun = function(msg, args) {
 			title = "OPolicja jest w drodze!";
 			image = "https://media1.tenor.com/images/1e24b2919248472c16a7cd21b99c9e82/tenor.gif";
 		break;
+		default:
+			return;
 	}
-	if(title.length > 0 || desc.length > 0 || link != null || thumbnail != null || image != null) {
-		postEmbed(msg.channel, title, desc, link, thumbnail, image);
-		console.log(`${msg.author.username}: ${args[0]}`);
-	}	
+	
+	postEmbed(msg.channel, title, desc, link, thumbnail, image);
+	console.log(`${msg.author.username}: ${args[0]}`);
 };
 
 module.exports = fun;
