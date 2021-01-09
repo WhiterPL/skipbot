@@ -313,6 +313,12 @@ var fun = function(msg, args) {
 			title = "OPolicja jest w drodze!";
 			image = "https://media1.tenor.com/images/1e24b2919248472c16a7cd21b99c9e82/tenor.gif";
 		break;
+		case 'dim':
+		case 'wit':
+			title = "Zaskakujące Utarczki Smokopodobnych ";
+			desc = "Przeczytaj o przygodach Dima i Wita!";
+			link = "http://wanderers-library-pl.wikidot.com/zaskakujace-utarczki-smokopodobnych";
+		break;
 		default:
 			return;
 	}
