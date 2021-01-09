@@ -317,7 +317,7 @@ var fun = function(msg, args) {
 			return;
 	}
 	
-	postEmbed(msg.channel, title, desc, link, thumbnail, image);
+	postEmbed(msg.channel, title, desc, msg.author, link, thumbnail, image);
 	console.log(`${msg.author.username}: ${args[0]}`);
 };
 
