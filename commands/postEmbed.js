@@ -8,7 +8,7 @@ var postEmbed = function(channel, title, desc, author = null, link = null, thumb
     .setURL(link)
     .setThumbnail(thumbnail)
     .setImage(image)
-    .setFooter(author.username, author.defaultAvatarURL))
+    .setFooter(author.username, author.avatarURL()))
 };
 
 module.exports = postEmbed;
