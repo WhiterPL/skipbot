@@ -199,8 +199,8 @@ var fun = function(msg, args) {
 			title = "Ban";
 			if(args[1] == null) desc = "Banowanie " + msg.author.username + " w toku...";
 			else {
-				var person = msg.content.slice(4);
-				if(person.lenght > 25) person = person.slice(0, 25);
+				var person = msg.content.slice(4).toString();
+				if(person.lenght > 25) person = person.slice(0, 15);
 				desc = "Banowanie " + person + " w toku...";
 			}
 			thumbnail = "https://cdn.discordapp.com/avatars/707328208944496721/3ed420d516bbeceb94ac770eca9c51ba.png?size=128";		
@@ -209,8 +209,8 @@ var fun = function(msg, args) {
 			title = "Kick";
 			if(args[1] == null) desc = "Kickowanie " + msg.author.username + " w toku...";
 			else {
-				var person = msg.content.slice(5);
-				if(person.lenght > 25) person = person.slice(0, 25);
+				var person = msg.content.slice(5).toString();
+				if(person.lenght > 25) person = person.slice(0, 15);
 				desc = "Kickowanie  " + person + " w toku...";
 			}
 			thumbnail = "https://cdn.discordapp.com/avatars/707328208944496721/3ed420d516bbeceb94ac770eca9c51ba.png?size=128";		
@@ -218,7 +218,11 @@ var fun = function(msg, args) {
 		case 'mute':
 			title = "Mute";
 			if(args[1] == null) desc = "Muteowanie " + msg.author.username + " w toku...";
-			else 				desc = "Muteowanie " + args[1] + " w toku...";
+			else {
+				var person = msg.content.slice(5).toString();
+				if(person.lenght > 25) person = person.slice(0, 15);
+				desc = "Muteowanie  " + person + " w toku...";
+			}
 			thumbnail = "https://cdn.discordapp.com/avatars/707328208944496721/3ed420d516bbeceb94ac770eca9c51ba.png?size=128";		
 			break;
 		case 'zasady':
