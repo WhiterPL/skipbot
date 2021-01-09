@@ -198,13 +198,21 @@ var fun = function(msg, args) {
 		case 'ban':
 			title = "Ban";
 			if(args[1] == null) desc = "Banowanie " + msg.author.username + " w toku...";
-			else 				desc = "Banowanie " + args[1] + " w toku...";
+			else {
+				var person = msg.content.slice(4);
+				if(person.lenght > 25) person = person.slice(0, 25);
+				desc = "Banowanie " + person + " w toku...";
+			}
 			thumbnail = "https://cdn.discordapp.com/avatars/707328208944496721/3ed420d516bbeceb94ac770eca9c51ba.png?size=128";		
 			break;
 		case 'kick':
 			title = "Kick";
 			if(args[1] == null) desc = "Kickowanie " + msg.author.username + " w toku...";
-			else 				desc = "Kickowanie " + args[1] + " w toku...";
+			else {
+				var person = msg.content.slice(5);
+				if(person.lenght > 25) person = person.slice(0, 25);
+				desc = "Kickowanie  " + person + " w toku...";
+			}
 			thumbnail = "https://cdn.discordapp.com/avatars/707328208944496721/3ed420d516bbeceb94ac770eca9c51ba.png?size=128";		
 			break;
 		case 'mute':
