@@ -21,7 +21,8 @@ var customPostEmbed = function(client, msg) {
 		case 4:
 			link = args[3] != "" ? args[3] : null;
 		case 3:
-			var channelid = args[2].trim;
+			var channelid = "";
+			channelid = args[2].trim;
 			channelid = channelid.slice(2, -1);
 
 			channel = client.channels.cache.get(channelid);
