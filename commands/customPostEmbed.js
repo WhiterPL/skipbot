@@ -31,7 +31,7 @@ var customPostEmbed = function(client, msg) {
 			title = args[0].slice(5);
 	}
 
-	console.log(channelid);
+	console.log(`${channelid} ${args[2]}`);
 
 	postEmbed(channel, title, desc, link, thumbnail, image, msg.author);
 };
