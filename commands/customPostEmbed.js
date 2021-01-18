@@ -21,14 +21,14 @@ var customPostEmbed = function(client, msg) {
 		case 4:
 			link = args[3] != "" ? args[3] : null;
 		case 3:
-			channel = client.channels.fetch(args[2].slice(2, -1));
+			channel = await client.channels.fetch(args[2].slice(2, -1));
 		case 2:
 			desc = args[1];
 		case 1:
 			title = args[0].slice(5);
 	}
 
-	console.log(msg.channel);
+	console.log(channel);
 
 	postEmbed(channel, title, desc, link, thumbnail, image, msg.author);
 };
