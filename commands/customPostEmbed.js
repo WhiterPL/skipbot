@@ -24,15 +24,15 @@ var customPostEmbed = function(client, msg) {
 			var channelid = args[2].trim();
 			channelid = channelid.slice(2, -1);
 
-			channel = client.channels.cache.get(channelid);
+			if(channelid < 18) channel = msg.channel;
+			else channel = client.channels.cache.get(channelid);
 		case 2:
 			desc = args[1];
 		case 1:
 			title = args[0].slice(5);
 	}
 
-	console.log(`${channelid} ${args[2]}`);
-
+	console.log(`${msg.author.username}: ${msg.content}`);
 	postEmbed(channel, title, desc, link, thumbnail, image, msg.author);
 };
 
