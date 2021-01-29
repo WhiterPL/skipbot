@@ -25,7 +25,7 @@ var customPostEmbed = function(client, msg) {
 			channelid = channelid.slice(2, -1);
 
 			if(channelid < 18) channel = msg.channel;
-			else channel = client.channels.cache.get(channelid); console.log(channelid);
+			else channel = client.channels.cache.get(channelid);
 		case 2:
 			desc = args[1];
 		case 1:

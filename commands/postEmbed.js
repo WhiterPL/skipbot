@@ -11,13 +11,16 @@ var postEmbed = function(channel, title, desc, link = null, thumbnail = null, im
     .setImage(image)
     .setFooter(author.tag, author.avatarURL()))
   } catch (e) {
-    channel.send(new Discord.MessageEmbed()
-    .setColor('#21d92a')
-    .setTitle(title)
-    .setDescription(desc)
-    .setURL(link)
-    .setThumbnail(thumbnail)
-    .setImage(image))
+    try {
+      channel.send(new Discord.MessageEmbed()
+      .setColor('#21d92a')
+      .setTitle(title)
+      .setDescription(desc)
+      .setURL(link)
+      .setThumbnail(thumbnail)
+      .setImage(image))
+    } catch (e2) {console.log(e2)}
+    
   }
   
 };
