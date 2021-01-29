@@ -3,7 +3,7 @@ const postEmbed = require("./postEmbed.js");
 var customPostEmbed = function(client, msg) {
 	if(!msg.member.roles.cache.some(role => role.permissions.has(0x8))) return;
 
-	var args = msg.content.split(";");
+	var args = msg.content.split("/;");
 
 	var channel = msg.channel;
 	var title = "";
