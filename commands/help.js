@@ -21,7 +21,7 @@ var help = function(msg, args) {
 
 	if(msg.member.roles.cache.some(role => role.permissions.has(0x8))) {
 		helpmsg += 	'\n' + 
-					'   **Komendy administracyjne:** \n'
+					'   **Komendy administracyjne:** \n' +
 					'**• !post** `tytuł` /; `opis` /; `kanał` /; `link`/;`miniaturka`/;`obraz`';
 	}
 
